@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Guess the number</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<script src="scripts.js"></script>
+</head>
+
+<body onload="initializeSettings()">
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron">
+				<h1>Guess the Number, Danar!</h1>
+				<h3>You can make up to 20 tries!</h3>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+			
+			Today is <span id="dayOfWeek"></span>
+						
+			</div>
+			<div class="col-sm-4"></div>
+				
+			
+		</div>
+
+
+	</div>
+
+	<script>
+		var dayOfWeek=function(){
+			var day=new Date().getDay();
+			var nameOfDay;
+			switch (day){
+				case 0:
+					nameOfDay= "Sunday";
+					break;
+				case 1:
+					nameOfDay= "Monday";
+					break;
+				case 2:
+					nameOfDay= "Tuesday";
+					break;
+				case 3:
+					nameOfDay= "Wednesday";
+					break;
+				case 4:
+					nameOfDay= "Thursday";
+					break;
+				case 5:
+					nameOfDay= "Friday";
+					break;
+				case 6:
+					nameOfDay= "Saturday";
+					break;
+			}
+			return nameOfDay;
+		};
+		document.getElementById("dayOfWeek").innerHTML=dayOfWeek();
+	
+	</script>
+</body>
+
+
+</html>

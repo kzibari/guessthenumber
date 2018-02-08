@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Guess the number</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<script src="scripts.js"></script>
+</head>
+
+<body onload="initializeSettings()">
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron">
+				<h1>Guess the Number!</h1>
+				<h3>You can make up to 5 tries!</h3>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-5"></div>
+			<div class="col-sm-6"></div>
+			<div class="col-sm-1">
+				<p id="maxNumber">
+					Maximum number: <input type="text" class="form-control input-sm" id="maxNumberValue" value=10 size="3" oninput="setMaxNumber()">
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4 text-center">
+				<p>
+					<strong>Enter a number between 0 and <span id="maxNum">10</span>:</strong>
+				</p>
+			</div>
+			<div class="col-sm-4">
+
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm-5"></div>
+			<div class="col-sm-2">
+				<p>
+					<input type="text" class="form-control input-lg" id="userGuess" size="3">
+				</p>
+				<p>
+					<button type="button" id="guessBtn" onclick="checkGuess()" class="btn btn-primary btn-lg btn-block">Guess</button>
+				</p>
+			</div>
+			<div class="col-sm-5">
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-5"></div>
+			<div class="col-sm-2 text-center">
+
+				<p id="guessesRemaining">
+					You have <span id="triesLeft"></span> guesses remaining!
+				</p>
+
+				<strong id="result"></strong>
+
+				<button type="button" id="playAgain" onclick="playAgain()" class="btn btn-primary btn-lg btn-block" style="display: none;">Play Again</button>
+			</div>
+			<div class="col-sm-5">
+
+			</div>
+		</div>
+
+
+	</div>
+
+</body>
+
+
+</html>

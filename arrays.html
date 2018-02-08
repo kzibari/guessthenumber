@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Guess the number</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<script src="scripts.js"></script>
+</head>
+
+<body onload="initializeSettings()">
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron">
+				<h1>Guess the Number, Danar!</h1>
+				<h3>You can make up to 20 tries!</h3>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+
+				<p>Enter 5 cities you would most like to visit in your lifetime?</p>
+
+				<input type="text" id="city1">
+				<input type="text" id="city2">
+				<input type="text" id="city3">
+				<input type="text" id="city4">
+				<input type="text" id="city5">
+				<br>
+				<button type="button" id="btn1" onclick="cities.forEach(displayCities())">Add Cities</button>
+
+
+
+			</div>
+			<div class="col-sm-4"></div>
+
+
+		</div>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+
+				<p>Here are your fav cities you would most like to visit in your lifetime:</p>
+
+				<p id="cities"></p>
+
+
+
+			</div>
+			<div class="col-sm-4"></div>
+
+
+		</div>
+
+
+	</div>
+	<script>
+		var cities = new Array();
+
+		function displayCities() {
+			cities=[];
+			cities.push(document.getElementById("city1").value);
+			cities.push(document.getElementById("city2").value);
+			cities.push(document.getElementById("city3").value);
+			cities.push(document.getElementById("city4").value);
+			cities.push(document.getElementById("city5").value);
+			cities.pop();
+			document.getElementById("cities").innerHTML=(cities.sort()).join(" - ") + ", " + cities.length;
+		}
+		
+
+	</script>
+
+</body>
+
+
+</html>

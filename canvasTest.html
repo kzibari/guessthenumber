@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+	var chart = new CanvasJS.Chart("progLanguagesPopularityChart", {
+		title:{
+			text: "Programming Languages by Popularity"              
+		},
+		data: [              
+		{
+			// Change type to "doughnut", "line", "splineArea", etc.
+			type: "column",
+			dataPoints: [
+				{ label: "Java",  y: 22.2  },
+				{ label: "Python", y: 17.6  },
+				{ label: "PHP", y: 8.8  },
+				{ label: "JavaScript",  y: 8.0  },
+				{ label: "C#",  y: 7.7  },
+				{ label: "C++", y: 6.7  },
+				{ label: "C",  y: 6.2  },
+				{ label: "R",  y: 3.7  },
+				{ label: "Objective-C", y: 3.5  },
+				{ label: "Swift",  y: 3.0  },
+				{ label: "Matlab",  y: 2.2  },
+				{ label: "Ruby",  y: 1.7  },
+				{ label: "VBA",  y: 1.5  },
+				{ label: "Others",  y: 7.2  }
+			]
+		}
+		],
+		axisY:{
+			suffix: " %"
+		}
+	});
+	chart.render();
+}
+</script>
+</head>
+<body>
+<div id="progLanguagesPopularityChart" style="margin: 0 auto; height: 500px; width: 80%;"></div>
+</body>
+</html>
